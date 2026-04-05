@@ -15,6 +15,7 @@ function onContentLoaded() {
 function setupDarkMode() {
     const body = document.body
     const toggleBtn = document.getElementById('dark-mode-toggle')
+    const toggleIcon = document.getElementById('dark-mode-icon')
     if (!toggleBtn) return
     
     const savedTheme = localStorage.getItem('theme')
@@ -22,13 +23,15 @@ function setupDarkMode() {
     
     if (savedTheme === 'dark' || (!savedTheme && mediaQuery.matches)) {
         body.classList.add('dark-mode')
-        toggleBtn.textContent = '☀️'
+        toggleIcon.textContent = 'light_mode'
+    } else {
+        toggleIcon.textContent = 'dark_mode'
     }
 
     toggleBtn.onclick = () => {
         body.classList.toggle('dark-mode')
         const isDark = body.classList.contains('dark-mode')
-        toggleBtn.textContent = isDark ? '☀️' : '🌙'
+        toggleIcon.textContent = isDark ? 'light_mode' : 'dark_mode'
         localStorage.setItem('theme', isDark ? 'dark' : 'light')
     }
 
@@ -36,10 +39,10 @@ function setupDarkMode() {
         if (!localStorage.getItem('theme')) {
             if (e.matches) {
                 body.classList.add('dark-mode')
-                toggleBtn.textContent = '☀️'
+                toggleIcon.textContent = 'light_mode'
             } else {
                 body.classList.remove('dark-mode')
-                toggleBtn.textContent = '🌙'
+                toggleIcon.textContent = 'dark_mode'
             }
         }
     })
