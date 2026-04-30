@@ -103,5 +103,13 @@
         "link": "https://dfishy.itch.io/crank-it",
         "hidden": false,
         "cover": false
+    },
+    {
+        "id": "spinner",
+        "name": "Spin the Sword",
+        "brief": "Spinner Wheel RPG",
+        "date": "2026-04-27 UTC",
+        "link": "https://dfishy.itch.io/spin-the-sword",
+        "cover": true
     }
 ]
