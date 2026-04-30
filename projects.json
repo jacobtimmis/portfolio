@@ -111,5 +111,14 @@
         "date": "2026-04-27 UTC",
         "link": "https://dfishy.itch.io/spin-the-sword",
         "cover": true
+    },
+    {
+        "id": "martian",
+        "name": "Martian Masher",
+        "brief": "Alien shmup",
+        "date": "2002-06-11 UTC",
+        "link": "https://dfishy.itch.io/signal",
+        "hidden": false,
+        "cover": true
     }
 ]
